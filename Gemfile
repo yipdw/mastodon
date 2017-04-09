@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.1'
 
 gem 'rails', '~> 5.0.2'
 gem 'sass-rails', '~> 5.0'
@@ -69,7 +69,7 @@ group :test do
   gem 'faker'
   gem 'rspec-sidekiq'
   gem 'simplecov', require: false
-  gem 'webmock'
+  gem 'webmock', '~> 2.3.1'
 end
 
 group :development do
