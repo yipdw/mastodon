@@ -5,14 +5,14 @@ import Link from 'react-router-dom/Link';
 const ColumnLink = ({ icon, text, to, onClick, href, method, hideOnMobile }) => {
   if (href) {
     return (
-      <a href={href} className={`column-link ${hideOnMobile ? 'hidden-on-mobile' : ''}`} data-method={method}>
+      <a href={href} className='column-link' data-method={method}>
         <i className={`fa fa-fw fa-${icon} column-link__icon`} />
         {text}
       </a>
     );
   } else if (to) {
     return (
-      <Link to={to} className={`column-link ${hideOnMobile ? 'hidden-on-mobile' : ''}`}>
+      <Link to={to} className='column-link'>
         <i className={`fa fa-fw fa-${icon} column-link__icon`} />
         {text}
       </Link>
