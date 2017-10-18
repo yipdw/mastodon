@@ -1,0 +1,38 @@
+$color1: darken(rgb(44,36,85), 10%) ;   // darkest
+$color2: rgb(130,0,255)             ;   // lightest
+$color3: lighten(rgb(44,36,85), 40%);   // lighter
+$color4: darken(rgb(0,178,255), 15%);   // vibrant
+$color5: #ddd                       ; 	 // white
+$color6: #df405a                    ; 	 // error red
+$color7: #79bd9a                    ; 	 // succ green
+$color8: #000                       ;   // black
+
+$ui-base-color: $color1;
+$ui-secondary-color: $color2;
+$ui-primary-color: $color3;
+$ui-highlight-color: $color4;
+$base-border-color: $color5;
+$simple-background-color: $color5;
+$primary-text-color: $color5;
+$error-value-color: $color6;
+$valid-value-color: $color7;
+$base-shadow-color: $color8;
+$base-overlay-background: $color8;
+
+@import 'application';
+
+.landing-page {
+  .header-wrapper, .header-wrapper.compact {
+    background: transparentize($ui-base-color, 0.5);
+  }
+  
+  .information-board {
+    background: transparentize(darken($ui-base-color, 4%), 0.5);
+  }
+}
+
+body, body.about-body {
+  background: $ui-base-color url('../images/background-rays.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
