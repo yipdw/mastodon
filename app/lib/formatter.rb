@@ -32,7 +32,7 @@ class Formatter
     html = "RT @#{prepend_reblog} #{html}" if prepend_reblog
     html = encode_and_link_urls(html, linkable_accounts)
     html = encode_custom_emojis(html, status.emojis) if options[:custom_emojify]
-    html = simple_format(html, {}, sanitize: false)
+    html = html.gsub(/(?:\n\r?|\r\n?)/, '<br />')
     html = html.delete("\n")
 
     html.html_safe # rubocop:disable Rails/OutputSafety
